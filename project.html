@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project</title>
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    
+     <!-- NAVBAR -->
+     <nav>
+        <div class="nav-left">
+            <ul>
+                <li><img src="/assets/logo.png" alt=""></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/project.html">My Project</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="contact.html">Contact Me</a>
+        </div>
+    </nav>
+
+    <!-- Add Project -->
+    <div class="blog">
+        <div class="blog-form">
+            <div class="form-container">
+                <form onsubmit="addBlog(event)">
+                    <h1>ADD MY PROJECT</h1>
+                    <div class="project-name">
+                        <label for="input-projectname">Project Name</label>
+                        <input type="text" name="" id="input-projectname">
+                    </div>
+        
+                    <div class="row">
+                        <div class="column">
+                            <label for="start-date">Start Date</label>
+                            <input type="date" name="" id="start-date">
+                        </div>
+        
+                        <div class="column">
+                            <label for="end-date">End Date</label>
+                            <input type="date" name="" id="end-date">
+                        </div>
+                    </div>
+        
+                    <div class="description">
+                        <label for="input-description">Description</label>
+                        <textarea name="" id="input-description" cols="30" rows="10"></textarea>
+                    </div>
+        
+                    <div class="input-technologies">
+                        <div class="technologies-group">
+                            <input value="fa-brands fa-node-js" type="checkbox" id="node-js" name="node-js">
+                            <label for="node-js">Node Js</label><br>
+
+                            <input value="fa-brands fa-react" type="checkbox" id="react-js" name="react-js">
+                            <label for="react-js">React Js</label><br>
+
+                            <input value="fa-brands fa-golang" type="checkbox" id="golang" name="golang">
+                            <label for="golang">Golang</label><br>
+
+                            <input value="fa-brands fa-js" type="checkbox" id="java-script" name="java-script">
+                            <label for="java-script">JavaScript</label>
+                        </div>
+                    </div>
+                    
+                    <div class="input-image">
+                        <label for="input-blog-image">Upload Image</label>
+                        <input type="file" name="" id="input-blog-image">
+                    </div>
+        
+                    <div class="input-submit">
+                        <button>Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Project -->
+    <div>
+        <h1>My Project</h1>
+    </div>
+    <div id="contents" class="blog-list">
+
+        <div class="project-list">
+            <div class="card">
+                <img src="/assets/image/pngwing.com.png" width="100%" alt="">
+                <h3>Mobile App</h3>
+                <p>Start Date : 5 Month</p>
+                <p>End Date : 5 Month</p>
+                <p class="p-content">Lorem ipsum dolor sit amet consectetur adipisicing elit..</p>
+                <i class="fa-brands fa-google-play"></i>
+                <i class="bi bi-android2"></i>
+                <i class="fa-brands fa-java"></i>
+
+                <div class="buttons">
+                    <div class="input-btn">
+                        <button type="button" class="action_btn">Save</button>
+                        <button type="button" class="action_btn">Cancel</button>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+
+    <script src="project.js"></script>
+</body>
+</html>

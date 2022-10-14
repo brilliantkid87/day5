@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+
+     <!-- NAVBAR -->
+     <nav>
+        <div class="nav-left">
+            <ul>
+                <li><img src="/assets/logo.png" alt=""></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/project.html">My Project</a></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <a href="/contact.html">Contact Me</a>
+        </div>
+    </nav>
+
+    <!-- Contact -->  
+    <form>
+        <div class="container">
+            <h2>Get In Touch</h2>
+
+            <div>
+                <label for="input-name">Name</label>
+                <input type="text" name="" id="input-name">
+            </div>
+    
+            <div>
+                <label for="input-email">Email</label>
+                <input type="email" name="" id="input-email">
+            </div>
+    
+            <div>
+                <label for="input-phone">Phone Number</label>
+                <input type="number" name="" id="input-phone">
+            </div>
+    
+            <div>
+                <label for="input-subject">Subject</label>
+                <select name="" id="input-subject">
+                    <option hidden>select</option>
+                    <option>Fullstack</option>
+                    <option>Backend</option>
+                    <option>Frontend</option>
+                </select>
+            </div>
+    
+            <div>
+                <label for="input-messages">Your Messages</label>
+                <textarea name="" id="input-messages" cols="30" rows="10"></textarea>
+            </div>
+    
+            <div class="input-submit">
+                  <button type="button" onclick="showData()">Submit</button>
+            </div>
+
+        </div>
+    </form>
+    
+    <script src="/contact.js"></script>
+</body>
+</html>

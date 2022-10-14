@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Navbar */
+nav {
+    background-color: lightgray;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 15px;
+}
+
+nav ul li a {
+    transition: 0.3s;
+    color: black;
+}
+
+nav ul li a:hover {
+    color: white;
+}
+
+.nav-left {
+    flex: 50%;
+    margin-left: 15px;
+}
+
+.nav-right {
+    flex: 50%;
+    text-align: end;
+    margin-right: 15px;
+}
+
+.nav-right a {
+    background-color: #52ab98;
+    border-radius: 10px;
+    padding: 3px;
+    color: white;
+    transition: 0.3s;
+}
+
+.nav-right a:hover {
+    color: lightgray;
+}
+
+/* Add Project */
+h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.blog {
+    background-color: #f2f2f2;
+}
+
+.form-container {
+    padding: 25px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form div input, textarea {
+    width: 100%;
+    padding: 6px;
+    border-radius: 4px;
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+    margin-top: 10px;
+    margin-bottom: 16px;
+    transition: 0.3s;
+}
+
+form div label {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.project-name input {
+    box-shadow: 2px 3px lightgray;
+}
+
+.column input {
+    box-shadow: 2px 3px lightgray;
+}
+
+.description textarea {
+    box-shadow: 2px 3px lightgray;
+}
+
+.input-image {
+    margin-top: 10px;
+}
+
+.input-image input {
+    box-shadow: 2px 3px lightgray;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+.input-image input {
+    background-color: white;
+}
+
+form div button {
+    background-color: black;
+    color: white;
+    padding: 3px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+form div button:hover {
+    background-color: #52ab98;
+}
+
+.input-submit {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.technologies-group input {
+    width: 5%;
+}
+
+.technologies-group label {
+    font-weight: normal;
+}
+
+/* Project */
+.blog-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    max-width: 200px;
+    padding: 10px;
+    margin: 20px;
+    border: none;
+} 
+  
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.h3-card {
+    display: flex;
+    justify-content: center;
+}
+
+.p-content {
+    text-align: justify;
+    margin-top: 10px;
+}
+
+.project-technologies {
+    margin-top: 10px;
+    word-spacing: 10px;
+}
+
+.input-btn {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.action_btn {
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    border: none;
+    border-radius: 15px;
+    background-color: black;
+    color: white;
+}
+
+.action_btn:hover {
+    background-color: #52ab98;
+}
+
