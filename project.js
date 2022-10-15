@@ -51,6 +51,7 @@ function addBlog(event) {
         reactJs,
         golang,
         javascript,
+        postAt: new Date(),
         image
     }
     
@@ -72,7 +73,11 @@ function renderBlog() {
         document.getElementById("contents").innerHTML += `
             <div class="card">
             <img src="${dataBlog[index].image}" width="100%" alt="">
-            <h3>${dataBlog[index].title}</h3>
+            <p>
+            <a href="/project-detail.html" target="_blank">${dataBlog[index].title}</a>
+            <p>
+            ${getFullTime(dataBlog[index].postAt)}
+            </p>
             <p>Start Date : ${dataBlog[index].startDate}</p>
             <p>End Date : ${dataBlog[index].endDate}</p>
             <p class="p-content">${dataBlog[index].description}</p>
@@ -80,6 +85,9 @@ function renderBlog() {
             <i class="${dataBlog[index].reactJs}"></i>
             <i class="${dataBlog[index].golang}"></i>
             <i class="${dataBlog[index].javascript}"></i>
+            <p>
+            ${getDistanceTime(dataBlog[index].postAt)}
+            </p>
             <div class="buttons">
                 <div class="input-btn">
                     <button class="action_btn">Save</button>
@@ -92,59 +100,57 @@ function renderBlog() {
     }
 }
 
-function getFullTIme(time) {
-    let monthName = ["jan", "feb", "mar"]
-    console.log(monthName);
-    
+function getFullTime(time) {
+
+    let monthName = ['Jan', 'Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nop','Dec']
+    console.log(monthName[8]);
+
     let date = time.getDate()
     console.log(date);
 
     let monthIndex = time.getMonth()
     console.log(monthIndex);
 
-    let year = time.getFullYear()
+    let year  = time.getFullYear()
     console.log(year);
 
     let hours = time.getHours()
-    console.log(hours);
+    let minutes = time.getMinutes()
 
     if (hours <= 9) {
-        hours ="0" + hours
-        
-    }
-    if (minutes <= 9) {
-        minutes ="0" + minutes
-        
+        hours = "0" + hours
+    } else if (minutes <= 9) {
     }
 
     return `${date} ${monthName[monthIndex]} ${year} ${hours}:${minutes} WIB`
 }
 
-// function getDistanceTIme(time) {
-//     let timeNow = new Date()
-//     let timePost = time
+function getDistanceTime(time){
 
-//     let distance = timeNow -timePost
-//     console.log(distance);
+    let timeNow = new Date()
+    let timePost = time
 
-//     let milisecond = 1000;
-//     let secondHours = 3600;
-//     let hoursInDay = 24;
+    let distance = timeNow - timePost 
+    console.log(distance);
 
-//     let distanceDay = Math.floor(distance / (milisecond * secondHours * hoursInDay));
-//     let distanceHours = Math.floor(distance / (milisecond * 60 * 60));
-//     let distanceMinutes = Math.floor(distance / (milisecond * 60));
-//     let distanceSecond = Math.floor(distance / milisecond);
+    let milisecond = 1000 
+    let secondInHours = 3600 
+    let hoursInDay = 24 
 
-// }
-function check_uncheck_checkbox(isChecked) {
-	if(isChecked) {
-		$('input[name="technologies"]').each(function() { 
-			this.checked = true; 
-		});
-	} else {
-		$('input[name="technologies"]').each(function() {
-			this.checked = false;
-		});
-	}
+    let distanceDay = Math.floor(distance / (milisecond * secondInHours * hoursInDay))
+    let distanceHours = Math.floor(distance / (milisecond * 60 * 60))
+    let distanceMinutes = Math.floor(distance / (milisecond * 60))
+    let distanceSecond = Math.floor(distance / milisecond)
+    
+    
+    if(distanceDay > 0){
+        return `${distanceDay} day ago`
+    } else if(distanceHours > 0){
+        return `${distanceHours} hours ago`
+    } else if(distanceMinutes > 0){
+        return `${distanceMinutes} minutes ago`
+    } else {
+        return `${distanceSecond} seconds ago`
+    }
+    
 }

@@ -31,7 +31,7 @@ function showData() {
     let emailReceiver = "Brilliantkid87@gmail.com"
 
     let a = document.createElement("a");
-    a.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailReceiver}&su=${inputSubject}&body=hallo nama saya ${inputName} ${inputMessage} silahkan hubungi ${inputPhone}`
+    a.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${emailReceiver}&su=${inputSubject}&body=hallo Hello my name is ${inputName} ${inputMessage} %0d%0Aplease contact me ${inputPhone}`
 
     a.click()
 }
