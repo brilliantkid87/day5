@@ -75,9 +75,6 @@ function renderBlog() {
             <img src="${dataBlog[index].image}" width="100%" alt="">
             <p>
             <a href="/project-detail.html" target="_blank">${dataBlog[index].title}</a>
-            <p>
-            ${getFullTime(dataBlog[index].postAt)}
-            </p>
             <p>Start Date : ${dataBlog[index].startDate}</p>
             <p>End Date : ${dataBlog[index].endDate}</p>
             <p class="p-content">${dataBlog[index].description}</p>
@@ -154,3 +151,7 @@ function getDistanceTime(time){
     }
     
 }
+
+setInterval(function() {
+    renderBlog()
+}, 3000);
