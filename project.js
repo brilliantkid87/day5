@@ -71,6 +71,8 @@ function renderBlog() {
         console.log(dataBlog[index]);        
 
         document.getElementById("contents").innerHTML += `
+            <div id="contents" class="blog-list">
+            <div class="project-list">
             <h1>My Project</h1>
             <div class="card">
             <img src="${dataBlog[index].image}" width="100%" alt="">
